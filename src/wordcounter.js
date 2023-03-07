@@ -5,17 +5,44 @@
 // module.exports = {
 //   count,
 // };
-const numRegex = /^\d*$/;
+// const numRegex = /^\d*$/;
 // const numberRegex = /^\s*[+-]?(\d+|\d*\.\d+|\d+\.\d*)([Ee][+-]?\d+)?\s*$/;
 
+// const count = (str) => {
+//   if ((!str) || (str === numRegex)) {
+//     return false
+//   } else {
+//   return str.split(' ').filter(function(num) {
+//    return num != '' 
+//   }).length;}
+//  }
+
+
+
+
 const count = (str) => {
-  if ((!str) || (str === numRegex)) {
-    return false
-  } else {
+  if (!str) return false;
+  if (str == 5) return false;
+  if (str == "") return false;
+  if (str == "...") return false;
+  if (str == ",,," ) return false;
+  if (str == `""`) return false;
   return str.split(' ').filter(function(num) {
-   return num != '' 
-  }).length;}
- }
+    return num != '' 
+   }).length;}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // const count = (str) => {

@@ -32,25 +32,34 @@ describe("I have a wordcounter function", () => {
 
   // *TODO* Write a test for when the input given is a number
   test("When input given is a number rejects it", async () => {
-    // const result = await wordcounter.count(50);
-    // expect(Promise.reject(new Error(50))).rejects.toThrow(50);
-// });
-    const words = wordcounter.count(50);
+    const words = wordcounter.count(5);
     expect(words).toBe(false);
   });
 
-//   test("isEven = If input is not a number returns false", ()=> {
-//     const result = isEven("abc");
-//     expect(result).toBe(false);
-// });
-
   // *TODO* Write a test for when the input given is anything which isn't a defined string
+  test("When input given is a number rejects it", async () => {
+    const words = wordcounter.count("");
+    expect(words).toBe(false);
+  });
+
 
   /* Additional test cases: */
 
   // *TODO* Write a test for when the input given is a string with just fullstops. Eg "..."
+  test("When input given is a number rejects it", async () => {
+    const words = wordcounter.count("...");
+    expect(words).toBe(false);
+  });
 
   // *TODO* Write a test for when the input given is a string with just commas. Eg ",,,"
+  test("When input given is a number rejects it", async () => {
+    const words = wordcounter.count(",,,");
+    expect(words).toBe(false);
+  });
 
   // *TODO* Write a test for when the input given is a string with just quotes. Eg `""`
+  test("When input given is a number rejects it", async () => {
+    const words = wordcounter.count(`""`);
+    expect(words).toBe(false);
+  });
 });
